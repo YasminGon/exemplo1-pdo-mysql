@@ -1,0 +1,15 @@
+CREATE DATABASE lunna;
+
+USE lunna;
+
+CREATE TABLE generos(
+    id INT AUTO INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE livros(
+    id INT AUTO INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    id_genero INT NOT NULL,
+    FOREIGN KEY (id_genero) REFERENCES generos(id)
+);
